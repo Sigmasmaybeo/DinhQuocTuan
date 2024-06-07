@@ -1,0 +1,106 @@
+.U{
+  text-align: center;
+  font-style: italic;
+  
+}
+
+.O{
+ margin-left: 45%;
+  border:2px  solid black;
+  height: 50%;
+  width: 50%;
+  background-color: skyblue;
+}
+
+.I{
+  font-size: 50px;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.O2{
+  margin-left: 27%;
+  border:2px  solid black;
+  height: 50%;
+  width: 50%;
+  background-color: skyblue;
+}
+
+.west{
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+
+}
+
+.Row{
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=0O%2fFnVMk&id=B7CDBF9A1DF593E1B902C2A32B2D33F454F2355E&thid=OIP.0O_FnVMkKLlprDphHbnragHaJc&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.d0efc59d532428b969ac3a611db9eb6a%3frik%3dXjXyVPQzLSujwg%26riu%3dhttp%253a%252f%252f2.bp.blogspot.com%252f-BnJqpo8DJHk%252fUOmf9elav-I%252fAAAAAAAAML8%252f8fJWdAXZ9Nk%252fs1600%252fPortugal-vs-Turkey-cristiano-ronaldo-1499617-1076-1372.jpg%26ehk%3da%252frLRiuV7F9Uq2jGaqhF1YNUoXLLnrkmoKuw0oJ4kcg%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1372&expw=1076&q=Ronaldo&simid=608054012750136029&FORM=IRPRST&ck=75DE4F80B3E13D075C39AD199072119F&selectedIndex=4&itb=0") ;
+}
+
+
+.image{
+  width: 300px;
+  height: 175px;
+  border-radius: 50px ;
+  padding:20px ;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  border-radius: 50px;
+  padding: 20px;
+  width: 350px;
+  
+
+}
+
+.item-name{
+  text-align: center;
+}
+
+.view{
+  border-radius: 50px;
+  width: 50px;
+ margin-left: 43%;
+}
+
+.Button-detail{
+  border-radius: 50px;
+}
+
+.item-detail{
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  border-radius: 50px;
+  padding: 20px;
+  width: 350px;
+  margin-left: 530px;
+}
+
+.foo{
+  border-radius: 50px;
+  background-color: grey;
+  text-align: center;
+}
+
+
+.item-detail2{
+  margin-right: 50px;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  border-radius: 50px;
+  padding: 20px;
+  width: 350px;
+ margin-left: 45px;
+ display: inline-block;
+}
