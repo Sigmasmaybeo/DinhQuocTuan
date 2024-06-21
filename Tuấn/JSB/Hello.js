@@ -1,43 +1,61 @@
-var users = [
-    { username: "user1", password: "password1" }, 
-    { username: "user2", password: "password2" },
-    { username: "user3", password: "password3" }
-  ];
-document.getElementById("registerForm").addEventListener ("submit",function(event) {event.preventDefault();
+function getUsers () {
+    const users = localStorage.getItem('users')
+    return users ? JSON.parse(users) : [];
+}
 
-var registerUserName = document.getElementById("registerName"). value;
-var registerUserPassword = document.getElementById("registerPassword"). value;
+function setUsers(users) {
+    localStorage.setItem('users',JSON.stringify(users));
+}
 
-var existingUser = users.find(function (user){
-    return user.username == registerUserName && user.password == registerUserPassword;
+
+document.getElementById('buttonRegister').addEventListener('click', function(event) {
+    event.preventDefault();
+
+var registerName = document.getElementById("registerName").value;
+var registerPassword = document.getElementById("registerPassword").value;
+var registerEmail = document.getElementById("registerEmail").value;
+
+if (!registerName || !registerPassword || !registerEmail) {
+    alert("Fill all please if you want to create a account."); 
+    return;
+  }
+
+  const users = getUsers ();
+  const AlreadyUser = users.find((user) => user.username === registerName);
+
+  if (AlreadyUser) {
+    alert("Are you serious right now bro?");
+    return;
+  }
+
+  users.push({ username: registerName, password: registerPassword });
+  setUsers(users);
+  alert("Add account compelete you may login right now!");
+  window.location.href = "login.html";
+
 })
 
-if(existingUser) {
-    alert("bị trùng tài khoản")
-}
 
-else {
-    users.push ({username: registerUserName, password: registerUserPassword})
-    alert("Đăng ký thành công")
-}
+document.getElementById("buttonLogIn").addEventListener('click', function(event) {
+    event.preventDefault();
+    var loginName = document.getElementById("LogInName").value;
+    var loginPassword = document.getElementById("LogInPassword").value;
 
-});
-
-document.getElementById("logInForm").addEventListener ("submit",function(event) { event.preventDefault();
-
-var logInUserName = document.getElementById("logInName"). value;
-var logInPassword = document.getElementById("logInPassword"). value;
-
-var foundUser = users.find(function (user){
-    return user.username == logInUserName && user.password == logInPassword });
-
-    if (foundUser) {
-        alert("Đăng Nhập Thành Công");
-        window.location.href="Home.html"
+    if(!loginName || !loginPassword) {
+        alert("Fill all to login.");
+        return;
     }
+    const users = getUsers();
+    const user = users.find(
+        (user) => user.username === loginName && user.password === loginPassword
+      );
 
-    else {
-        alert("Đăng Nhập Thất bại")
-    }
+      if (user) {
+        alert("login compelete!");
+        window.location.href = "Home.html";
+      }else {
+        alert("Can't find account")
+      }
+})
 
-});
+
