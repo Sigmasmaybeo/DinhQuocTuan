@@ -9,4 +9,9 @@ let yourCart = JSON.parse(localStorage.getItem('yourCart')) || [];
 yourCart.push(Item);
 localStorage.setItem('yourCart', JSON.stringify(yourCart));
 alert('Add compelete!');
+window.location.href = "Giohang.html";
+console.log(Item)
+
+
+
 });

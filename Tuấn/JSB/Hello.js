@@ -36,10 +36,11 @@ if (!registerName || !registerPassword || !registerEmail) {
 })
 
 
-document.getElementById("buttonLogIn").addEventListener('click', function(event) {
-    event.preventDefault();
-    var loginName = document.getElementById("LogInName").value;
-    var loginPassword = document.getElementById("LogInPassword").value;
+document.getElementById('buttonLogin').addEventListener('click', function(event) {
+  event.preventDefault();
+
+    var loginName = document.getElementById("logInName").value;
+    var loginPassword = document.getElementById("logInPassword").value;
 
     if(!loginName || !loginPassword) {
         alert("Fill all to login.");
